@@ -1,0 +1,46 @@
+schema_version = "1.1"
+artifacts = []
+
+[task]
+name = __NAME__
+description = __DESCRIPTION__
+keywords = __TAGS__
+[[task.authors]]
+name = "RLPipeline"
+
+[metadata]
+author_name = "RLPipeline"
+difficulty = __DIFFICULTY__
+category = __CATEGORY__
+tags = __TAGS__
+expert_time_estimate_min = __EXPERT_MIN__
+junior_time_estimate_min = __JUNIOR_MIN__
+generator_model = __GENERATOR_MODEL__
+seed_domain = __SEED_DOMAIN__
+seed_task_type = __SEED_TASK_TYPE__
+seed_stack = __SEED_STACK__
+seed_skills = __SEED_SKILLS__
+seed_depth = __SEED_DEPTH__
+seed_width = __SEED_WIDTH__
+seed_difficulty_source = __SEED_DIFFICULTY_SOURCE__
+
+[verifier]
+timeout_sec = __VERIFIER_TIMEOUT__
+
+[agent]
+timeout_sec = __AGENT_TIMEOUT__
+
+[environment]
+build_timeout_sec = __BUILD_TIMEOUT__
+cpus = 1
+memory_mb = 2048
+storage_mb = 10240
+gpus = 0
+allow_internet = true
+mcp_servers = []
+
+[verifier.env]
+
+[environment.env]
+
+[solution.env]

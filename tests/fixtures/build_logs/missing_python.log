@@ -1,0 +1,44 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 139B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/debian:bookworm-slim
+#2 DONE 1.4s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/4] FROM docker.io/library/debian:bookworm-slim@sha256:734a72b3d6142a71993b4bc580ca01d8ca687f77a2c422d96a961d3376b179bc
+#4 resolve docker.io/library/debian:bookworm-slim@sha256:734a72b3d6142a71993b4bc580ca01d8ca687f77a2c422d96a961d3376b179bc 0.0s done
+#4 DONE 0.0s
+
+#5 [2/4] WORKDIR /app
+#5 CACHED
+
+#6 [internal] load build context
+#6 transferring context: 85B done
+#6 DONE 0.0s
+
+#7 [3/4] COPY _build/ /tmp/_build/
+#7 DONE 0.8s
+
+#8 [4/4] RUN python3 /tmp/_build/make_data.py
+#8 0.208 /bin/sh: 1: python3: not found
+#8 ERROR: process "/bin/sh -c python3 /tmp/_build/make_data.py" did not complete successfully: exit code: 127
+------
+ > [4/4] RUN python3 /tmp/_build/make_data.py:
+0.208 /bin/sh: 1: python3: not found
+------
+Dockerfile:4
+--------------------
+   2 |     WORKDIR /app
+   3 |     COPY _build/ /tmp/_build/
+   4 | >>> RUN python3 /tmp/_build/make_data.py
+   5 |     
+--------------------
+ERROR: failed to build: failed to solve: process "/bin/sh -c python3 /tmp/_build/make_data.py" did not complete successfully: exit code: 127
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/yqoitw6x3fxyptu7eum3pxti9

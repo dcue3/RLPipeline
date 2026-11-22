@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Secrets / environment
+.env
+
+# OS
+.DS_Store
+
+# Harbor run outputs (written by `harbor run`)
+jobs/
+trials/
+.harbor/
+dist.tar.gz
+
+# Pipeline run records (local only; each run is described in its report.md)
+runs/
+
+# Editor swap files
+*.swp
+*.swo
+
+# Lock taken while a task is copied into output/
+output/.ship.lock
+
+# Public benchmark seeds (fetched, not committed)
+seeds/
+

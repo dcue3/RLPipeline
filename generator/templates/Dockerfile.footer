@@ -1,0 +1,11 @@
+# --- Verifier tooling (added by the task pipeline; not part of the task) ---
+# Installed at build time so that grading is fast and needs no network.
+RUN (command -v curl >/dev/null 2>&1 || (apt-get update && apt-get install -y --no-install-recommends curl ca-certificates && rm -rf /var/lib/apt/lists/*)) \
+ && curl -LsSf https://astral.sh/uv/0.9.5/install.sh | env UV_UNMANAGED_INSTALL=/opt/verifier/bin sh \
+ && UV_CACHE_DIR=/opt/verifier/cache UV_PYTHON_INSTALL_DIR=/opt/verifier/python \
+    /opt/verifier/bin/uvx -p 3.13 -w pytest==8.4.1 -w pytest-json-ctrf==0.3.5 pytest --version
+
+# --- Build-time generators (removed by the task pipeline) ---
+# Scripts that created starting data live in /tmp/_build. They can reveal what
+# the solver is meant to work out, so they never stay in the image.
+RUN rm -rf /tmp/_build
