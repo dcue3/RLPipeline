@@ -1,0 +1,21 @@
+{
+  "_note": "ILLUSTRATIVE EXAMPLE. Every value here was written by hand to show the record formats and the shipping rule. It is not output from a real pipeline run and must not be cited as a measured result.",
+  "tests": [
+    {
+      "name": "test_three_lines_in_order",
+      "fair": true,
+      "stated_in": "instruction: three values, one per line"
+    },
+    {
+      "name": "test_efficiency_in_tolerance",
+      "fair": true,
+      "stated_in": "instruction: efficiency from the standard"
+    },
+    {
+      "name": "test_significant_figures",
+      "fair": true,
+      "stated_in": "instruction: three significant figures"
+    }
+  ],
+  "alignment": "every test claim is stated in or inferable from the instruction and container"
+}

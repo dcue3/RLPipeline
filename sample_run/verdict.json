@@ -1,0 +1,12 @@
+{
+  "_note": "ILLUSTRATIVE EXAMPLE. Every value here was written by hand to show the record formats and the shipping rule. It is not output from a real pipeline run and must not be cited as a measured result.",
+  "task": "example-water-activity",
+  "passes": 2,
+  "valid_runs": 5,
+  "band": "1-3 of 5",
+  "in_band": true,
+  "flags": [],
+  "flagged": false,
+  "final": "shipped",
+  "reason": "2 of 5 passed; audits and fairness review found no fault in the task"
+}

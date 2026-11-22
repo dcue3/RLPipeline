@@ -4,6 +4,20 @@ Synthetic task generation for RL and evaluation of terminal agents. The pipeline
 writes Harbor-format terminal tasks, checks them, measures how hard each one is
 for a fixed agent, and keeps only the tasks in a learnable difficulty band.
 
+## Purpose
+
+The main use is to **author tasks with a larger model and teach a smaller model
+to solve them**. A capable model such as Claude Opus 5.5 writes the environment,
+the reference solution, the tests and the instruction. A smaller model such as
+Claude Haiku 5.5 then attempts each task. The pipeline keeps only tasks where the
+smaller model sometimes succeeds, 1 to 3 times in 5. Those are the tasks a model
+can learn from: too easy teaches nothing, and too hard gives no signal.
+
+Each shipped task therefore comes with evidence: which attempts passed, why each
+failed attempt failed, and whether the task itself was fair. The shipped set can
+be used for RL training, for evaluation, or for studying where a small model's
+failures come from. A worked example is in [sample_run/](sample_run/).
+
 A seed sets what a task is about. Two kinds of seed are supported:
 
 - **Public seeds** (`--design public-seeds`): each task is seeded by a public
@@ -55,7 +69,7 @@ bash scripts/fetch_seeds.sh                 # clones Terminal-Bench 4.0 tasks in
 ## Commands
 
 ```bash
-bash scripts/generate.sh "fix a memory bug in a C ring buffer"   # one task, no measurement
+bash scripts/generate.sh "fix an off-by-one in a Go pagination helper"   # one task, no measurement
 bash scripts/validate.sh output/<task>                           # structural validator
 bash scripts/run_batch.sh --run-id rl1 --n 10 --design public-seeds,early-build,full-reports
 .venv/bin/python -m pytest tests -q                              # unit tests, no model or Docker
@@ -73,6 +87,7 @@ Batch options and design features are listed in [docs/DESIGN.md](docs/DESIGN.md)
 | `validator/` | structural validator for Harbor task directories |
 | `scripts/` | batch, single-task, validation and credential wrappers |
 | `tests/` | unit tests |
+| `sample_run/` | an illustrative record of one seed through every stage |
 | `output/` | shipped tasks (`output/<task>/`) and their evidence (`output/_evidence/`) |
 | `runs/` | per-run records (not committed) |
 | `seeds/` | fetched public tasks and their cards (not committed) |

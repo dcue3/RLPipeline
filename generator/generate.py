@@ -1,6 +1,6 @@
 """Generate one Harbor task from a topic string.
 
-    python -m generator.generate "fix a memory bug in a C ring buffer"
+    python -m generator.generate "fix an off-by-one in a Go pagination helper"
 
 This is the single-task entry point: it authors the task, runs the structural
 validator and the oracle/nop checks (with one repair for a structural failure

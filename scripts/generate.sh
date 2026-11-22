@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Generate a single task from a topic string.
-# Usage: bash scripts/generate.sh "fix a memory bug in a C ring buffer"
+# Usage: bash scripts/generate.sh "fix an off-by-one in a Go pagination helper"
 
 set -euo pipefail
 
@@ -9,7 +9,7 @@ ROOT_DIR="$(dirname "$SCRIPT_DIR")"
 
 if [ $# -lt 1 ]; then
     echo "Usage: bash scripts/generate.sh <topic>"
-    echo "Example: bash scripts/generate.sh \"fix a memory bug in a C ring buffer\""
+    echo "Example: bash scripts/generate.sh \"fix an off-by-one in a Go pagination helper\""
     exit 1
 fi
 

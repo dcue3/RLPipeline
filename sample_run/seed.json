@@ -1,0 +1,20 @@
+{
+  "_note": "ILLUSTRATIVE EXAMPLE. Every value here was written by hand to show the record formats and the shipping rule. It is not output from a real pipeline run and must not be cited as a measured result.",
+  "source_seed": "foodstuff-beta-activity (Terminal-Bench 4.0, public)",
+  "domain": "radiochemistry lab data reduction (liquid scintillation counting)",
+  "task_type": "investigate",
+  "stack": "python",
+  "skills": [
+    "combining inputs from spreadsheets and a reference document",
+    "decay-correcting a calibration standard",
+    "scaling an aliquot result to a mass-based concentration"
+  ],
+  "template_values": {
+    "sample_matrix": "bottled mineral water",
+    "calibration_nuclide": "Tc-99"
+  },
+  "difficulty_source": "public-seed",
+  "depth": 3,
+  "width": 2,
+  "persona": "a lab technician at a water-testing lab"
+}

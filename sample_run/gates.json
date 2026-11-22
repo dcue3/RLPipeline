@@ -1,0 +1,40 @@
+{
+  "_note": "ILLUSTRATIVE EXAMPLE. Every value here was written by hand to show the record formats and the shipping rule. It is not output from a real pipeline run and must not be cited as a measured result.",
+  "v1": {
+    "structural": {
+      "passed": true,
+      "reason": "ok"
+    },
+    "functional": {
+      "passed": false,
+      "reason": "oracle failed",
+      "after_repair": "tests/test_outputs.py changed"
+    }
+  },
+  "v2": {
+    "structural": {
+      "passed": true,
+      "reason": "ok"
+    },
+    "novelty": {
+      "passed": true,
+      "instruction.md": {
+        "share": 0.12,
+        "limit": 0.3
+      },
+      "tests/test_outputs.py": {
+        "share": 0.21,
+        "limit": 0.4
+      }
+    },
+    "functional": {
+      "passed": true,
+      "reason": "oracle passed twice, nop failed",
+      "oracle_runs": [
+        1.0,
+        1.0
+      ],
+      "nop_reward": 0.0
+    }
+  }
+}
