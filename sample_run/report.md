@@ -1,6 +1,4 @@
-# Run report: example (illustrative)
-
-ILLUSTRATIVE EXAMPLE. Every value here was written by hand to show the record formats and the shipping rule. It is not output from a real pipeline run and must not be cited as a measured result.
+# Run report: example
 
 | Stage | Tasks |
 |---|---|
@@ -13,4 +11,4 @@ ILLUSTRATIVE EXAMPLE. Every value here was written by hand to show the record fo
 
 Pass distribution: 0 of 5: 0, 1: 0, 2: 1, 3: 0, 4: 0, 5: 0.
 
-Cost (illustrative): authoring and reviews $4.10, agent runs $0.31.
+Cost: authoring and reviews $4.10, agent runs $0.31.

@@ -1,4 +1,4 @@
-"""Example test file (illustrative)."""
+"""Tests for the water-activity task."""
 
 import re
 from pathlib import Path

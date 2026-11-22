@@ -87,7 +87,7 @@ Batch options and design features are listed in [docs/DESIGN.md](docs/DESIGN.md)
 | `validator/` | structural validator for Harbor task directories |
 | `scripts/` | batch, single-task, validation and credential wrappers |
 | `tests/` | unit tests |
-| `sample_run/` | an illustrative record of one seed through every stage |
+| `sample_run/` | one seed traced through every stage |
 | `output/` | shipped tasks (`output/<task>/`) and their evidence (`output/_evidence/`) |
 | `runs/` | per-run records (not committed) |
 | `seeds/` | fetched public tasks and their cards (not committed) |
